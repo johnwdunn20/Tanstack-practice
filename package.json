@@ -13,6 +13,7 @@
     "@types/node": "^16.18.87",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
+    "ag-grid-react": "^31.1.1",
     "axios": "^1.6.8",
     "express": "^4.18.3",
     "mongoose": "^8.2.2",
