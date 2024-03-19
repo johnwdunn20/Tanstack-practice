@@ -6,7 +6,7 @@ import AGGrid from './components/AGGrid';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{height: '100vh'}}>
       <h3>AG Grid</h3>
       <AGGrid />
       <br />
