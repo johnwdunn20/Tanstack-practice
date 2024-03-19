@@ -14,7 +14,7 @@ interface IRow {
 }
 
 // Create new GridExample component
-const GridExample = () => {
+const AGGrid = () => {
   // Row Data: The data to be displayed.
   const [rowData, setRowData] = useState<IRow[]>([
     { make: 'Tesla', model: 'Model Y', price: 64950, electric: true },
@@ -45,4 +45,4 @@ const GridExample = () => {
     </div>
   );
 };
-export default GridExample;
+export default AGGrid;
