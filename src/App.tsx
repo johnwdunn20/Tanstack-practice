@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TanStackGrid from './components/TanStackGrid';
+import TanStackTable from './components/TanStackTable';
 import AGGrid from './components/AGGrid';
 
 function App() {
