@@ -1,26 +1,42 @@
-import React from 'react'
-import { useReactTable } from '@tanstack/react-table'
+import React, { useMemo, useState } from 'react'
+import { ColumnDef, useReactTable } from '@tanstack/react-table'
+
+//TData
+type User = {
+  firstName: string
+  lastName: string
+  age: number
+  visits: number
+  progress: number
+  status: string
+}
 
 const TanStackTable = () => {
-  const table = useReactTable({
-    columns: [
-      columnHelper.accessor()
+  const [data, setData] = useState<User[]>([
       {
-        Header: 'Column 2',
-        accessorKey: 'col2',
-      }
-    ],
-    data: [
-      {
-        col1: 'Hello',
-        col2: 'World'
+        "firstName": "Tanner",
+        "lastName": "Linsley",
+        "age": 33,
+        "visits": 100,
+        "progress": 50,
+        "status": "Married"
       },
       {
-        col1: 'React-Table',
-        col2: 'rocks'
+        "firstName": "Kevin",
+        "lastName": "Vandy",
+        "age": 27,
+        "visits": 200,
+        "progress": 100,
+        "status": "Single"
       }
-    ]
+  ])
+
+  const columns: ColumnDef<User>[] = []
+  const table = useReactTable({
+    columns,
+    data
   })
+  
   return (
     <div>TanStackTable</div>
   )
