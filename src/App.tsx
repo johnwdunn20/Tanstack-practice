@@ -11,7 +11,7 @@ function App() {
       <AGGrid />
       <br />
       <h3>TanStack Grid</h3>
-      <TanStackGrid />
+      <TanStackTable />
     </div>
   );
 }

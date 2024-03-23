@@ -4,11 +4,10 @@ import { useReactTable } from '@tanstack/react-table'
 const TanStackTable = () => {
   const table = useReactTable({
     columns: [
+      columnHelper.accessor()
       {
-        header: 'Column 1',
-      },
-      {
-        header: 'Column 2',
+        Header: 'Column 2',
+        accessorKey: 'col2',
       }
     ],
     data: [
