@@ -32,11 +32,11 @@ const TanStackTable = () => {
   ])
 
   const columns: ColumnDef<User>[] = []
-  const table = useReactTable({
-    columns,
-    data
-  })
-  
+  // const table = useReactTable({
+  //   columns,
+  //   data
+  // })
+
   return (
     <div>TanStackTable</div>
   )

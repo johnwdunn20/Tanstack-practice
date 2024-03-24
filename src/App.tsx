@@ -10,7 +10,7 @@ function App() {
       <h3>AG Grid</h3>
       <AGGrid />
       <br />
-      <h3>TanStack Grid</h3>
+      <h3>TanStack Table</h3>
       <TanStackTable />
     </div>
   );
