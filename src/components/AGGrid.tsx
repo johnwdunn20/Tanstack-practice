@@ -28,10 +28,10 @@ const AGGrid = () => {
 
   // Column Definitions: Defines & controls grid columns.
   const [colDefs, setColDefs] = useState<ColDef<IRow>[]>([
-    { field: "make" },
-    { field: "model" },
-    { field: "price" },
-    { field: "electric" },
+    { field: "make", filter: "agTextColumnFilter"},
+    { field: "model", filter: "agTextColumnFilter"},
+    { field: "price", filter: "agNumberColumnFilter"},
+    { field: "electric", filter: "agBooleanColumnFilter"},
   ]);
 
   // Container: Defines the grid's theme & dimensions.
