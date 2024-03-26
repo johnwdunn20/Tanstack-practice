@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import { useReactTable } from '@tanstack/react-table'
+import { useReactTable, getCoreRowModel } from '@tanstack/react-table'
 
 //TData
 type User = {
@@ -31,7 +31,9 @@ const TanStackTable = () => {
       }
   ])
 
-  const columns = [
+  // useMemo is a React hook that memorizes the output of a function and reuses it when the inputs change.
+  // This prevents unnecessary recalculations of the column array on every render
+  const columns = useMemo(() => [
     {
       accessorKey: 'firstName', // accessorKey: 'firstName' is the same as accessorFn: (row: User) => row.firstName??
       id: 'firstName',
@@ -42,10 +44,11 @@ const TanStackTable = () => {
       id: 'lastName',
       header: 'Last Name',
     },
-  ];
+  ], []);
   const table = useReactTable({
     data,
     columns,
+    getCoreRowModel: getCoreRowModel(),
   })
 
   return (
