@@ -1,0 +1,29 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  clean-install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.7.0'
+          cache: 'npm'
+      - name: Install Extension dependencies
+        run: |
+          cd extension
+          npm ci
+      - name: Build Extension
+        run: |
+          cd extension
+          npm run build
+      - name: Test Extension
+        run: |
+          cd extension
+          npm test
