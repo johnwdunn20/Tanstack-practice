@@ -46,7 +46,6 @@ const TanStackTable = () => {
   const table = useReactTable({
     data,
     columns,
-    getCoreRowModel: getCoreRowModel => getCoreRowModel(),
   })
 
   return (
