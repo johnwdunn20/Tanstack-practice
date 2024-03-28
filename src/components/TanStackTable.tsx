@@ -59,10 +59,8 @@ const TanStackTable = () => {
   });
 
   console.log('table: ', table);
-
   console.log('table.getHeaderGroups(): ', table.getHeaderGroups());
   console.log('table.getHeaderGroups()[0].headers: ', table.getHeaderGroups()[0].headers);
-
 
   return (
     <div>
