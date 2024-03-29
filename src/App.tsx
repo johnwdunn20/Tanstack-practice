@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TanStackTable from './components/TanStackTable';
 import AGGrid from './components/AGGrid';
