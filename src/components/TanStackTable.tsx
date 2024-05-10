@@ -18,7 +18,7 @@ type User = {
 const TanStackTable = () => {
   const [data, setData] = useState<User[]>([
     {
-      firstName: "Tanner",
+      firstName: "Tanner", 
       lastName: "Linsley",
       // "age": 33,
       // "visits": 100,
