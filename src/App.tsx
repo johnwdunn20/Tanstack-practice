@@ -12,6 +12,7 @@ function App() {
       <h3>TanStack Table</h3>
       <TanStackTable />
     </div>
+    
   );
 }
 
