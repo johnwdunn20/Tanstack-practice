@@ -13,10 +13,16 @@ const MapTest = () => {
       queryKey: 'queryKey',
       queryHash: 'queryHash',
       queryData: 'queryData',
-    }
+    },
+    {
+      eventType: 'query',
+      queryKey: 'queryKey',
+      queryData: 'queryData',
+    },
+    undefined
   ]
 
-  const queryHashes = data.map((item) => item.queryHash)
+  const queryHashes = data.map((item) => item?.queryHash)
   console.log(queryHashes);
 
   return (
